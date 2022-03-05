@@ -33,6 +33,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CLI", "CLI", "{8E1825DD-322
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pathfinders.Foundation.CLI.Users", "src\Foundation\CLI\code\Pathfinders.Foundation.CLI.Users.csproj", "{28858F97-24C5-40A5-9B9F-2B002320DA9C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pathfinders.Foundation.CLI.Users.DevEx", "Pathfinders.Foundation.CLI.Users.DevEx\Pathfinders.Foundation.CLI.Users.DevEx.csproj", "{43777D7D-655D-4580-8C4A-B72EB8330E95}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{28858F97-24C5-40A5-9B9F-2B002320DA9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28858F97-24C5-40A5-9B9F-2B002320DA9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28858F97-24C5-40A5-9B9F-2B002320DA9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43777D7D-655D-4580-8C4A-B72EB8330E95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43777D7D-655D-4580-8C4A-B72EB8330E95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43777D7D-655D-4580-8C4A-B72EB8330E95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43777D7D-655D-4580-8C4A-B72EB8330E95}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +56,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{8E1825DD-3227-4004-A29B-A8D9C971EDC4} = {4FDA1DCD-D33E-447E-91C1-F4AE818E2CF0}
 		{28858F97-24C5-40A5-9B9F-2B002320DA9C} = {8E1825DD-3227-4004-A29B-A8D9C971EDC4}
+		{43777D7D-655D-4580-8C4A-B72EB8330E95} = {8E1825DD-3227-4004-A29B-A8D9C971EDC4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {311DA37D-528B-43B2-A99B-E7253F841D46}

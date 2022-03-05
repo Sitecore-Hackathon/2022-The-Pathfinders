@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <Sdk Name="Microsoft.Build.CentralPackageVersions" Version="2.1.3" />
+
+  <PropertyGroup>
+      <TargetFramework>netcoreapp3.1</TargetFramework>
+      <NeutralLanguage>en</NeutralLanguage>
+      <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
+      <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+      <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+      <IncludeBuildOutput>false</IncludeBuildOutput>
+      <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+      <Configurations>Debug;Release</Configurations>
+      <TargetsForTfmSpecificContentInPackage>$(TargetsForTfmSpecificContentInPackage);CustomBuildOutputTarget</TargetsForTfmSpecificContentInPackage>
+      <NoWarn>$(NoWarn);NU5100</NoWarn>
+      <AssemblyName>Pathfinders.Foundation.CLI.Users.DevEx</AssemblyName>
+      <PackageId>Pathfinders.Foundation.CLI.Users.DevEx</PackageId>
+      <RootNamespace>Pathfinders.Foundation.CLI.Users.DevEx</RootNamespace>
+      <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+      <PackageVersion>1.0.0</PackageVersion>
+      <PackageTags>Pathfinders, User, Hackathon</PackageTags>
+      <PackageLicenseExpression>MIT</PackageLicenseExpression>
+      <IsPackable>true</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Sitecore.DevEx.Client.Cli" VersionOverride="4.1.1" />
+    <PackageReference Include="Sitecore.DevEx.Serialization.Client" VersionOverride="4.1.1" />
+  </ItemGroup>
+
+  <Target Name="CustomBuildOutputTarget">
+        <ItemGroup>
+            <TfmSpecificPackageFile Include="$(OutputPath)Pathfinders.Foundation.CLI.Users.DevEx.dll" PackagePath="plugin" />
+        </ItemGroup>
+    </Target>
+
+</Project>
