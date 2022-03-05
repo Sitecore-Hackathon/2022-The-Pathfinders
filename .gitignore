@@ -50,3 +50,8 @@ _ReSharper*/
 .vs/
 #Nuget packages folder
 packages/
+docker/data/*/*.txt
+docker/deploy
+docker/data/solr/configsets
+docker/data/solr
+HelixTemplates

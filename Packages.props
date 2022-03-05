@@ -35,5 +35,9 @@
         <PackageReference Update="Microsoft.Extensions.Http" Version="3.1.1" />
         <PackageReference Update="Microsoft.Identity.Web" Version="1.11.0" />
         <PackageReference Update="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
+
+        <PackageReference Include="Sitecore.DevEx.Client.Cli" Version="4.1.1" />
+        <PackageReference Include="Sitecore.Devex.Client.Cli.Extensibility" Version="4.1.1" />
+        <PackageReference Include="Sitecore.DevEx.Serialization.Client" Version="4.1.1" />
   </ItemGroup>
 </Project>
