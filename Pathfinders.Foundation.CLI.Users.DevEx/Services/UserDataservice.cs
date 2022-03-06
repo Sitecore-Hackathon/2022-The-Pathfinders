@@ -41,7 +41,7 @@ namespace Pathfinders.Foundation.CLI.Users.DevEx.Services
 
             var result = this.CreateApiClient(environmentConfig).RunQuery<string>("/sitecore/api/graph/users", new GraphQLRequest()
             {
-                Query = "\nquery{\n user(userName: \"$userName\")\n {userName\n domain\n}\n}",
+                Query = "\nquery{\n user($userName: \"userName\")\n {userName\n domain\n}\n}",
                 Variables = (object)dictionary
             }, "user");
 

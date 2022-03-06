@@ -5,7 +5,7 @@
         <PackageId>Pathfinders.Foundation.CLI.Users.DevEx</PackageId>
         <Authors>Amir Setoudeh, Tyler Malkus</Authors>
         <Product>Pathfinders.Foundation.CLI.Users.DevEx</Product>
-        <Version>1.0.10</Version>
+        <Version>1.0.11</Version>
         <Company>WayPath Consulting</Company>
         <BaseOutputPath />
         <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
