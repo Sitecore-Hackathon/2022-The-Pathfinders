@@ -2,28 +2,23 @@
     <PropertyGroup>
         <TargetFramework>netcoreapp3.1</TargetFramework>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
-        <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
-        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <IncludeBuildOutput>false</IncludeBuildOutput>
-        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-        <Configurations>Debug;Release</Configurations>
-        <TargetsForTfmSpecificContentInPackage>$(TargetsForTfmSpecificContentInPackage);CustomBuildOutputTarget</TargetsForTfmSpecificContentInPackage>
         <PackageId>Pathfinders.Foundation.CLI.Users.DevEx</PackageId>
-        <Authors>Pathfinders.Foundation.CLI.Users.DevEx</Authors>
+        <Authors>Amir Setoudeh, Tyler Malkus</Authors>
         <Product>Pathfinders.Foundation.CLI.Users.DevEx</Product>
-        <Version>1.0.4</Version>
-        <Company>Pathfinders.Foundation.CLI.Users.DevEx</Company>
-        <IsPackable>true</IsPackable>
-        <OutputType>Library</OutputType>
+        <Version>1.0.10</Version>
+        <Company>WayPath Consulting</Company>
+        <BaseOutputPath />
+        <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+        <TargetsForTfmSpecificContentInPackage>$(TargetsForTfmSpecificContentInPackage);CustomBuildOutputTarget</TargetsForTfmSpecificContentInPackage>
     </PropertyGroup>
-
+    <ItemGroup>
+    <PackageReference Include="Sitecore.Devex.Client.Cli.Extensibility" Version="4.1.1" />
+    <PackageReference Include="Sitecore.DevEx.Extensibility.Publishing" Version="4.1.1" />
+    <PackageReference Include="Sitecore.DevEx.Serialization.Client" Version="4.1.1" />
+  </ItemGroup>
     <Target Name="CustomBuildOutputTarget">
         <ItemGroup>
             <TfmSpecificPackageFile Include="$(OutputPath)Pathfinders.Foundation.CLI.Users.DevEx.dll" PackagePath="plugin" />
-            <TfmSpecificPackageFile Include="$(OutputPath)Microsoft.Extensions.Http.dll" PackagePath="plugin" />
         </ItemGroup>
     </Target>
-
-
 </Project>

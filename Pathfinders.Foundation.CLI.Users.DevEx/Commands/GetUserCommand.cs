@@ -11,8 +11,10 @@ namespace Pathfinders.Foundation.CLI.Users.DevEx.Commands
     public class GetUserCommand : SubcommandBase<UserTask, UserArgs>
     {
         public GetUserCommand(IServiceProvider container)
-          : base("publish", "Performs a publish operation on all content", container)
+          : base("getUser", "Gets a user", container)
         {
+            ((Command)this).AddOption(ArgOptions.Config);
+            ((Command)this).AddOption(ArgOptions.EnvironmentName);
             ((Command)this).AddOption(ArgOptions.UserName);
             ((Command)this).AddOption(ArgOptions.Verbose);
             ((Command)this).AddOption(ArgOptions.Trace);

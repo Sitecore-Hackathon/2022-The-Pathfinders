@@ -34,16 +34,18 @@ namespace Pathfinders.Foundation.CLI.Users.DevEx.Services
             IDictionary<string, string> dictionary = (IDictionary<string, string>)new Dictionary<string, string>()
             {
                 {
-                    "$userName",
+                    "userName",
                     userName
                 }
             };
 
-            return this.CreateApiClient(environmentConfig).RunQuery<string>("/sitecore/api/graph/users", new GraphQLRequest()
+            var result = this.CreateApiClient(environmentConfig).RunQuery<string>("/sitecore/api/graph/users", new GraphQLRequest()
             {
                 Query = "\nquery{\n user(userName: \"$userName\")\n {userName\n domain\n}\n}",
-                Variables = dictionary
+                Variables = (object)dictionary
             }, "user");
+
+            return result;
         }
 
         private ISitecoreApiClient CreateApiClient(EnvironmentConfiguration environmentConfig)

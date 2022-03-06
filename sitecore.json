@@ -8,7 +8,8 @@
     "Sitecore.DevEx.Extensibility.Publishing@4.1.1",
     "Sitecore.DevEx.Extensibility.Indexing@4.1.0",
     "Sitecore.DevEx.Extensibility.ResourcePackage@4.1.0",
-    "Pathfinders.Foundation.CLI.Users.DevEx@1.0.4"
+    "GoHorse.CLI.Command@1.1.0",
+    "Pathfinders.Foundation.CLI.Users.DevEx@1.0.10"
   ],
   "serialization": {
     "defaultMaxRelativeItemPathLength": 120,

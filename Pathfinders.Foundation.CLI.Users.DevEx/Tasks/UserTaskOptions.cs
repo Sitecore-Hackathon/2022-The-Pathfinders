@@ -12,7 +12,7 @@ namespace Pathfinders.Foundation.CLI.Users.DevEx.Tasks
         {
             this.Require("Config");
             this.Default("EnvironmentName", (object)"default");
-            this.Require("UserName");
+            //this.Require("UserName");
         }
     }
 }

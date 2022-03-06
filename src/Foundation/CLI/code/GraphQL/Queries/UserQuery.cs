@@ -31,10 +31,10 @@ namespace Pathfinders.Foundation.CLI.Users.GraphQL.Queries
         public Database Database { get; set; }
         protected override User Resolve(ResolveFieldContext context)
         {
-            string username = context.GetArgument<string>("userName");
+            string username = context.GetArgument<string>("$userName");
             if (!string.IsNullOrEmpty(username) && User.Exists(username))
             {
-                return User.FromName(username, false);
+                var user = User.FromName(username, false);
             }
 
             return null;

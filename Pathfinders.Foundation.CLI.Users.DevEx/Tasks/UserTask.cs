@@ -38,10 +38,11 @@ namespace Pathfinders.Foundation.CLI.Users.DevEx.Tasks
             EnvironmentConfiguration environmentConfiguration;
             if (!(await this._rootConfigurationManager.ResolveRootConfiguration(options.Config)).Environments.TryGetValue(options.EnvironmentName, out environmentConfiguration))
                 throw new InvalidConfigurationException("Environment " + options.EnvironmentName + " was not defined. Use the login command to define it.");
-            await _userDataservice.GetUserData(environmentConfiguration, options.UserName);
+            var result = await _userDataservice.GetUserData(environmentConfiguration, options.UserName);
             outerStopwatch.Stop();
+            ColorLogExtensions.LogConsoleVerbose(this._logger, result, new ConsoleColor?(), new ConsoleColor?());
             ColorLogExtensions.LogConsoleVerbose(this._logger, string.Empty, new ConsoleColor?(), new ConsoleColor?());
-            ColorLogExtensions.LogConsoleVerbose(this._logger, string.Format("Publishing is finished in {0}ms.", (object)outerStopwatch.ElapsedMilliseconds), new ConsoleColor?(), new ConsoleColor?());
+            ColorLogExtensions.LogConsoleVerbose(this._logger, string.Format("Retrieved user info in {0}ms.", (object)outerStopwatch.ElapsedMilliseconds), new ConsoleColor?(), new ConsoleColor?());
             outerStopwatch = (Stopwatch)null;
         }
     }
