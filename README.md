@@ -14,7 +14,7 @@ Unfortuantely, we were not able to finish.
 However, the plugin in 80% complete.  Once completed,  You'll need to register it:
 
 add this key to your nuget.config:
-<add key="waypath" value="https://www.myget.org/F/waypath/api/v3/index.json" />
+'https://www.myget.org/F/waypath/api/v3/index.json'
 
 then run:
 'dotnet sitecore plugin add -n Pathfinders.Foundation.CLI.Users.DevEx'
